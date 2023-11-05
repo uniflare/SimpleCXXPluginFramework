@@ -1,0 +1,16 @@
+set(SOURCES
+	"dllmain.cpp"
+	"Plugin.cpp"
+	
+	"include/plugin3/IPlugin.h"
+	
+	"include/plugin3/Messages/TestMessage.h"
+)
+add_library(Plugin3 SHARED ${SOURCES})
+target_include_directories(Plugin3
+	PRIVATE "${CMAKE_CURRENT_LIST_DIR}/include/plugin3"
+	INTERFACE "${CMAKE_CURRENT_LIST_DIR}/include"
+)
+target_link_libraries(Plugin3 Common)
+set_target_properties(Plugin3 PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG}/plugins")
+set_target_properties(Plugin3 PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE}/plugins")

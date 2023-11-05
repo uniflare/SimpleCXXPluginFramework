@@ -1,0 +1,15 @@
+set(SOURCES
+	"dllmain.cpp"
+	"Plugin.cpp"
+	
+	"include/plugin1/IPlugin.h"
+)
+add_library(Plugin1 SHARED ${SOURCES})
+target_include_directories(Plugin1
+	PRIVATE "${CMAKE_CURRENT_LIST_DIR}/include/plugin1"
+	INTERFACE "${CMAKE_CURRENT_LIST_DIR}/include"
+	PRIVATE $<TARGET_PROPERTY:Plugin3,INTERFACE_INCLUDE_DIRECTORIES>
+)
+target_link_libraries(Plugin1 Common)
+set_target_properties(Plugin1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG}/plugins")
+set_target_properties(Plugin1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE}/plugins")

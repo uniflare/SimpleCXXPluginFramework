@@ -1,0 +1,10 @@
+set(SOURCES
+	"main.cpp"
+	"MessageManager.cpp"
+	"MessageManager.h"
+	"PluginManager.cpp"
+	"PluginManager.h"
+)
+add_executable(PluginFramework ${SOURCES})
+target_link_libraries(PluginFramework Common)
+set_property(TARGET PluginFramework PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "$(OutDir)")

@@ -1,0 +1,26 @@
+set(SOURCES
+	"Core.cpp"
+	"DependencyManager.cpp"
+	
+	"include/common/DependencyManager.h"
+	"include/common/Guid.h"
+	"include/common/ICore.h"
+	"include/common/IInterface.h"
+	"include/common/IMessage.h"
+	"include/common/IMessageManager.h"
+	"include/common/IPlugin.h"
+	"include/common/IPluginManager.h"
+	"include/common/ISystem.h"
+	"include/common/Messages"
+	"include/common/Platform.h"
+	
+	"include/common/Messages/OnPluginInitialized.h"
+	"include/common/Messages/OnPluginLoaded.h"
+	"include/common/Messages/OnPluginUnloading.h"
+)
+add_library(Common STATIC ${SOURCES})
+target_include_directories(Common
+	PRIVATE "${CMAKE_CURRENT_LIST_DIR}/include/common"
+	INTERFACE "${CMAKE_CURRENT_LIST_DIR}/include"
+)
+target_compile_definitions(Common PRIVATE "_COMMON_LIB")
