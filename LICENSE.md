@@ -1,3 +1,4 @@
+### Simple CXX Plugin Framework
 Copyright 2023 Jeremy Wade
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
@@ -18,12 +19,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT,  TORT OR OTHERWISE,  ARISING FROM,
 OUT OF OR  IN CONNECTION  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
 SOFTWARE.
 
-========================================================
-Portions of this software are licensed by third-parties:
-========================================================
+_Portions of this software fall under the following licenses_
 
-constexpr GUID parsing
+### constexpr GUID parsing
+
 Copyright 2017 Alexander Bessonov
+
 Copyright 2018 Tobias Loew
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
@@ -43,3 +44,4 @@ AUTHORS OR  COPYRIGHT HOLDERS  BE  LIABLE  FOR  ANY  CLAIM,  DAMAGES  OR  OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT,  TORT OR OTHERWISE,  ARISING FROM, 
 OUT OF OR  IN CONNECTION  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
 SOFTWARE.
+---
